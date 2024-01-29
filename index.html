@@ -29,13 +29,111 @@
              placeholder="Contraseña" minlength="11" required>
         </div>
         <div>
-            <input type="text" placeholder="Su modelo de coche" title="Modelos posibles: A1, A3, A4 y A5" pattern="A|a(1|3|4|5)">
+            <input type="text" placeholder="Su modelo de coche" 
+            title="Modelos posibles: A1, A3, A4 y A5" 
+            pattern="A|a(1|3|4|5)">
         </div>
         <div>
             <label for="correo">Email</label>
             <input type="email" id="correo"
             placeholder="Escribe tu email" required>
         </div>
+
+
+        <div>
+            <fieldset>
+                <legend>Indica tu grupo de edad</legend>
+                <label for="primero">Menor de 18 </label>
+                <input type="radio" id="primero" name="edades"><br>
+                <label for="segundo">18-65 </label>
+                <input type="radio" id="segundo" name="edades" checked><br>
+                <label for="tercero">Mayor de 65 </label>
+                <input type="radio" id="tercero" name="edades"><br>
+            </fieldset>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Selecciona los ingredientes con CHECKBOT</legend>
+                <label for="primero-ck">Lechuga </label>
+                <input type="checkbox" id="primero-ck" name="edades"><br>
+                <label for="segundo-ck">Tomate</label>
+                <input type="checkbox" id="segundo-ck" name="edades" checked><br>
+                <label for="tercero-ck">Pepinillo </label>
+                <input type="checkbox" id="tercero-ck" name="edades"><br>
+            </fieldset>
+        </div>
+        <div>
+            <label for="miarea">Observaciones</label>
+            <textarea name="mensaje" id="miarea"
+             cols="30" rows="10" maxlength="200" 
+             placeholder="Máximo 200 caracteres"></textarea>  
+        </div>
+<!--input de opciones-->
+        <div>
+            <fieldset>
+                <legend>Opciones</legend>
+                <label for="misopciones">Seleccionar</label>
+                <select name="opciones" id="misopciones">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    </select>
+            </fieldset>
+        </div>
+<!--añadiendo multiple al select; te deja seleccionar 
+varias opciones pultando tecla ctrl-->
+        <div>
+            <fieldset>
+                <legend>Opciones</legend>
+                <label for="misopciones">Seleccionar</label>
+                <select multiple name="opciones" id="misopciones">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    </select>
+            </fieldset>
+        </div>
+        <div>
+        <fieldset>
+            <legend>Opciones de números y letras</legend>
+            <label for="misopciones2"></label>
+            <select name="numerosyletras" id="misopciones2">
+                <optgroup label="Números"><!--ésta etiqueta es para hacer"grupos"; lo que sale en 
+                negrita; en éste caso el label dentro de etiquta
+            optgroup se utiliza para poner el título visible de dicha-->
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <option value="opcion4">Opción 4</option>
+                </optgroup>
+                <optgroup label="Letras">
+                    <option value="opcion1">Opción A</option>
+                    <option value="opcion2">Opción B</option>
+                    <option value="opcion3">Opción C</option>
+                    <option value="opcion4">Opción 4</option>
+                </optgroup>
+
+            </select>
+        </fieldset>
+        </div>
+
+        <div>
+            <label for="">Subir archivo</label>
+            <input type="file" name="subirFoto"
+             id="foto">
+<!--para enviar un email; se pone formaction y a continuacion el 
+correo al que se lo quieres enviar-->
+             <input type="submit" value="Contacta con técnico"
+             formaction="mailto:oalmaria.h@gmail.com">
+<!--para que te lleve a alguna web. Ej; ventana explicativa-->
+             <input type="submit" value="Información legal"
+             formaction="https://oalhuetortajar.com/politica-de-privacidad/" 
+             formtarget="_blank"> <!--fromtarget="blank" PARA QUE NO TE PISE 
+            LA PÁGINA; SE TE ABRA UNA PESÑA NUEVA-->
+        </div>
+
+
         <input type="submit" value="Enviar" >
 
     </form>
